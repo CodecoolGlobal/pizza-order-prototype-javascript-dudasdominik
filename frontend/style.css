@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;400;800&display=swap');
+:root{
+    --yellow: #FFE135;
+    --dark_grey: #424b55;
+    --light_grey: #708090;
+    --tuqoise: #6699CC;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: var(--yellow);
+    background-color: var(--dark_grey);
+    font-family: 'Martian Mono', monospace;
+}
+
+a {
+    color: var(--yellow);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav {
+    background-color: #2f353c;
+    margin-bottom: 3em;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.shoppingCart {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+svg {
+    height: 35px;
+    width: fit-content;
+    align-content: right;
+}
+
+.shirt-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    column-gap: 2em;
+    row-gap: 2em;
+    grid-column: 2;
+}
+
+.shirt-component {
+    background-color: var(--light_grey);
+    border: var(--yellow) 3px solid;
+    border-radius: 1em;
+}
+
+.shirt-component > img {
+    height: 10em;
+    width: 10em;
+    object-fit: contain;
+   
+}
+
+.shirt-component > form {
+    display: grid;
+    text-align: center;
+    justify-content: space-around;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+}
+
+
+
+input[type = "button"], input[type = "submit"] {
+    background-color: #FFE135;
+    border: solid #FFE135 2px;
+    min-height: 2em;
+    color: #424b55;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    font-family: 'Martian Mono', monospace;
+    font-weight: 200;
+    width: fit-content
+}
+
+input[type = "button"]:hover,  input[type = "submit"]:hover{
+    transition: .2s linear;
+    cursor: pointer;
+    background-color: #00000000;
+    color: #FFE135;
+    border-radius: .2em ;
+    font-weight: 400;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+}
+
+.details-text {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#design {
+    height: 30em;
+    width: 30em;
+    object-fit: contain;
+}
+
+.description {
+    color: var(--tuqoise);
+}

@@ -1,1 +1,5 @@
-No starter code is provided. Start from scratch!
+Todo:
+fiter
+cart hover
+cookies
+checkout

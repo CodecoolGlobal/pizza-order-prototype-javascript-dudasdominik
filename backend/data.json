@@ -1,0 +1,108 @@
+[
+    {
+        "product":"Kanye West",
+        "size": [0, 1],
+        "design":"https://i.ebayimg.com/images/g/PAIAAOSwsMhiiPRD/s-l500.jpg",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {
+        "product":"Code",
+        "size": ["L", "S", "XXL"],
+        "design":"https://m.media-amazon.com/images/I/A13usaonutL._AC_CLa%7C2140%2C2000%7C71PDthmBvNL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_UY1000_.png",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {
+        "product":"Language",
+        "size": ["L", "S", "XXL"],
+        "design":"https://res.cloudinary.com/teepublic/image/private/s--4ztczoo2--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_406/c_crop,g_north_west,h_588,w_441,x_-18,y_-22/g_north_west,u_upload:v1446840601:production:blanks:wahaid4l0xhexez2gwtn,x_-427,y_-321/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1548917502/production/designs/4117982_0.jpg",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50
+    },
+    {
+        "product":"Chungus",
+        "size": ["L", "S", "XXL"],
+        "design":"https://i.pinimg.com/originals/87/82/02/878202200db93ad49cefb6a636b074b1.jpg",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50
+    },
+    {
+        "product":"y tho",
+        "size": ["L", "S", "XXL"],
+        "design":"https://cdn.shopify.com/s/files/1/0844/9673/products/Y_THO_H_800x.jpg?v=1574000513",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {   
+        "product":"Angery",
+        "size": ["L", "S", "XXL"],
+        "design":"https://m.media-amazon.com/images/I/B1paZXqZSQS._CLa%7C2140%2C2000%7CB1QHbD3FTHS.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX522_.png",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {   
+        "product":"Watcha doin'",
+        "size": ["L", "S", "XXL"],
+        "design":"https://ae01.alicdn.com/kf/H74efa8e7d26843369faae5abcdf9b631t/Jesus-Is-Watching-Meme-Hoodies-Jesus-Christ-Dank-Meme-Dank-Meme-Christian-Meme-Masturbation-Joke-Naughty.jpg_Q90.jpg_.webp",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {   
+        "product":"Hány Fokos",
+        "size": ["L", "S", "XXL"],
+        "design":"https://isabel-5b8d.kxcdn.com/pamutlabor/plab00013704/plab00013704-ferfi_polo-fekete-768x768.jpg",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {   
+        "product":"John Xina",
+        "size": ["L", "S", "XXL"],
+        "design":"https://images-ext-1.discordapp.net/external/HK-UvIF7BzkwYOzWc6TI4mf93YhRQA6sG3w-1yHnFjI/https/i.kym-cdn.com/photos/images/original/002/219/113/c86.png",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {   
+        "product":"Bingus Cat",
+        "size": ["L", "S", "XXL"],
+        "design":"https://img.joomcdn.net/cd1a6fbed6d9636594173d1873e1f37318fd7379_original.jpeg",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    },
+    {  
+        "product":"!False",
+        "size": ["L", "S", "XXL"],
+        "design":"https://ih1.redbubble.net/image.1936058543.3327/ssrco,slim_fit_t_shirt,flatlay,fafafa:ca443f4786,front,wide_portrait,750x1000-bg,f8f8f8.u2.jpg",
+        "material": ["cotton", "fabric"],
+        "cost": 50000,
+        "stock": 50,
+        "type":"hoodie",
+        "gender":"nonbinary"
+    }
+]
