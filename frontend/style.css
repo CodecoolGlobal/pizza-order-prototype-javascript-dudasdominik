@@ -239,8 +239,9 @@ input[type = "button"]:enabled {
 
 .details {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5%;
+    padding: 3em;
 }
 
 .details-text {
@@ -249,13 +250,62 @@ input[type = "button"]:enabled {
 }
 
 #design {
-    height: 30em;
-    width: 30em;
-    object-fit: contain;
+    width: 100%;
 }
 
 .description {
     color: var(--tuqoise);
+}
+
+h2 {
+    font-size: 5em;
+}
+
+.general-info {
+    font-size: 1.2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.order {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 15em;
+    min-width: 15em;
+}
+
+.order > input[type="button"] {
+    font-weight: 800;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+input[type="number"] {
+    background: var(--light_grey);
+    border: var(--yellow) 2px solid;
+    max-height: 2em;
+    min-height: 2em;
+    font-size: 1em;
+    ox-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    color: #00bd79;
+    font-weight: 800;
+    max-width: 10em;
+    min-width: 10em;
+}
+
+#add-shirts {
+    justify-content: left;
+    align-items: left;
+    max-width: 15em;
+    min-width: 15em;
 }
 
 input[type="radio"] {
@@ -292,6 +342,9 @@ input[type="radio"]::before {
   input[type="radio"]:checked::before {
     transform: scale(1);
   }
+
+
+    /* Media quaries */
 
   @media screen and (max-width: 1444px) {
     .shirt-container {
