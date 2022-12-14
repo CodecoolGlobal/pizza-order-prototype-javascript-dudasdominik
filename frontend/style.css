@@ -2,7 +2,7 @@
 :root{
     --yellow: #FFE135;
     --dark_grey: #424b55;
-    --light_grey: #708090;
+    --light_grey: #53616f;
     --tuqoise: #6699CC;
 }
 
@@ -10,6 +10,8 @@
     padding: 0;
     margin: 0;
 }
+
+/* General Styles */
 
 body {
     color: var(--yellow);
@@ -29,6 +31,7 @@ nav {
     min-height: 50px;
     display: flex;
     align-items: center;
+    filter: drop-shadow(0px 10px 10px var(--yellow));
 }
 
 .shoppingCart {
@@ -43,6 +46,33 @@ svg {
     align-content: right;
 }
 
+input[type = "button"], input[type = "submit"] {
+    background-color: #FFE135;
+    border: solid #FFE135 2px;
+    min-height: 2em;
+    color: #424b55;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    font-family: 'Martian Mono', monospace;
+    font-weight: 200;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+input[type = "button"]:hover,  input[type = "submit"]:hover{
+    transition: .2s linear;
+    cursor: pointer;
+    background-color: #00000000;
+    color: #FFE135;
+    border-radius: .2em ;
+    font-weight: 400;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Front Page Styles */
+
 .shirt-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -56,50 +86,56 @@ svg {
     background-color: var(--light_grey);
     border: var(--yellow) 3px solid;
     border-radius: 1em;
+    opacity: 80%;
 }
 
 .shirt-component > img {
-    height: 10em;
-    width: 10em;
+    height: 14em;
+    width: 14em;
     object-fit: contain;
-   
+    margin: 1em;
 }
 
 .shirt-component > form {
     display: grid;
     text-align: center;
-    justify-content: space-around;
 }
 
+.shirt-component > h3 {
+    margin: .4em;
+    font-size: 1.3em;
+    font-weight: 800;
+}
+.shirt-component > div > h4 {
+    font-size: 0.8em;
+    font-weight: 100;
+    color: var(--tuqoise);
+}
+
+.shirt-component > div {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .main {
     display: grid;
     grid-template-columns: 2fr 6fr 2fr;
 }
 
-
-
-input[type = "button"], input[type = "submit"] {
-    background-color: #FFE135;
-    border: solid #FFE135 2px;
-    min-height: 2em;
-    color: #424b55;
-    font-size: 1em;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
-    font-family: 'Martian Mono', monospace;
-    font-weight: 200;
-    width: fit-content
+.shirt-component:hover {
+    transition: .5s;
+    scale: 1.03;
+    filter: drop-shadow(0px 10px 10px var(--yellow));
+    opacity: 100%;
 }
 
-input[type = "button"]:hover,  input[type = "submit"]:hover{
-    transition: .2s linear;
-    cursor: pointer;
-    background-color: #00000000;
-    color: #FFE135;
-    border-radius: .2em ;
-    font-weight: 400;
-}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Details Styles */
 
 .details {
     display: grid;
@@ -121,3 +157,38 @@ input[type = "button"]:hover,  input[type = "submit"]:hover{
 .description {
     color: var(--tuqoise);
 }
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  background-color: #fff;
+
+  color: var(--tuqoise);
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.15em solid var(--yellow);
+  border-radius: 50%;
+  place-content: center;
+  display: inline-flex;
+  justify-content: center;
+  transform: translateY(-0.075em);
+  align-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--yellow);
+  }
+
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }

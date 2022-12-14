@@ -27,6 +27,7 @@ async function getShirtData() {
 
     const response = await fetch(`/api/shirts/${urlParams.get("id")}`);
     const shirt = await response.json();
+    document.title = `⭐ Shirt ⁓ ${shirt.product}`
     fillContent(shirt);
 }
 
