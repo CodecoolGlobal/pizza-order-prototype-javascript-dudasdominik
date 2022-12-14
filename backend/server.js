@@ -11,6 +11,6 @@ app.use("/api", apis);
 app.use("/", express.static(path.resolve("frontend")));
 
 
-app.listen(80,"10.44.4.106");
+app.listen(80);
 
-console.log("http://10.44.4.106");
+console.log("http://localhost:80");

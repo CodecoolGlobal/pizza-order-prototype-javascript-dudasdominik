@@ -3,7 +3,9 @@
     --yellow: #FFE135;
     --dark_grey: #424b55;
     --light_grey: #53616f;
-    --tuqoise: #6699CC;
+    --tuqoise: #00bd79;
+    /* #6699CC; */
+    /* https://i.pinimg.com/564x/21/0c/cd/210ccd29b1fcedef462caa87f81f03a6.jpg */
 }
 
 * {
@@ -38,6 +40,7 @@ nav {
     position: absolute;
     right: 20px;
     cursor: pointer;
+    z-index: 10;
 }
 
 svg {
@@ -73,29 +76,70 @@ input[type = "button"]:hover,  input[type = "submit"]:hover{
     opacity: 0%;
     position: absolute;
     right: 0px;
-    top: 47px;
+    top: 0px;
     background-color: var(--dark_grey);
     padding: 1em;
+    padding-top: 65px;
+    display: none;
+    min-width: 15%;
+}
+
+.cart-component > h4 {
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.cart-component > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-component > div > span {
+    display: inline-block;
+    margin:10px 0 0 10px;
+    flex-grow: 1; 
+    width: calc(100% * (1/2) - 10px - 1px);
+    font-weight: 200;
+}
+
+.cart-component > div > .cart-label {
+    color: var(--tuqoise);
 }
 
 hr {
     margin-top: 5px;
     margin-bottom: 5px;
-    outline: var(--yellow);
-    border-color: var(--yellow);
-    color: var(--yellow);
-    background: var(--yellow);
+    outline: var(--tuqoise);
+    border-color: var(--tuqoise);
+    color: var(--tuqoise);
+    background: var(--tuqoise);
 }
 
 .hide:hover{
     opacity: 100%;
+    display: block;
+    outline: #00bd79 1px solid;
 }
 
 .shoppingCart:hover + .hide {
     display: block;
     opacity: 100%;
     transition: 1s;
+    outline: #00bd79 1px solid;
 }
+
+input[type = "button"]:disabled {
+    filter: grayscale(100%);
+    cursor: not-allowed;
+}
+
+input[type = "button"]:enabled {
+    filter: grayscale(0%);
+}
+
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Front Page Styles */
@@ -247,4 +291,27 @@ input[type="radio"]::before {
 
   input[type="radio"]:checked::before {
     transform: scale(1);
+  }
+
+  @media screen and (max-width: 1444px) {
+    .shirt-container {
+      grid-template-columns: 1fr;
+    }
+    .main {
+        grid-template-columns: 2fr 4fr 1fr;
+    }
+  }
+
+  @media screen and (max-width: 1020px) {
+    #searchBox {
+        display: none;
+    }
+
+    .main {
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .shirt-container {
+        grid-template-columns: 1fr 1fr;
+      }
   }

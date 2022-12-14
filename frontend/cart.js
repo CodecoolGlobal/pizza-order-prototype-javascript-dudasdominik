@@ -2,10 +2,12 @@ const cart_component = ({product, cost}, qty) =>
     `
         <div class="cart-component">
             <h4>${product}</h4>
-            <br>
-            <span class="cart-item">${cost}</span><span class="cart-label"> vbucks</span>
-            <br>
-            <span class="cart-item">${qty}</span><span class="cart-label"> pcs</span>
+            <div>
+                <br>
+                <span class="cart-item">${cost}</span><span class="cart-label"> vbucks</span>
+                <br>
+                <span class="cart-item">${qty}</span><span class="cart-label"> pcs</span>
+            </div>
             <hr>
         </div>
     `

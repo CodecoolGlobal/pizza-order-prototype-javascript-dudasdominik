@@ -49,7 +49,9 @@ async function clickCart(e) {
             }),
         })
         document.getElementById("cart-container").innerHTML = "";
-        fillCart();
+        await fillCart();
+        e.target.setAttribute("disabled", true);
+        setTimeout(() => {e.target.removeAttribute("disabled")}, 1000)
   } catch {
     console.log("Something's wrong, I can feel it 😭");
   }
