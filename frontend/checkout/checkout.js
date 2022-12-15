@@ -13,12 +13,12 @@ const fillItemContent = ({design, product, cost}, {qty, id}) => `
 `
 const fillCheckoutMenu = () => `
    <form>
-   <input class="inputs" type="text" placeholder="Name">
-   <input class="inputs" type="email" placeholder="Email address">
+   <input id="name"class="inputs" type="text" placeholder="Name">
+   <input id="email"class="inputs" type="email" placeholder="Email address">
    <input type="submit" hidden>
-   <input class="inputs" type="text" placeholder="City">
-   <input class="inputs" type="text" placeholder="Street">
-   <input id="checkout" onclick=checkoutListener() type="button" value="Press to Checkout">
+   <input id="city"class="inputs" type="text" placeholder="City">
+   <input id="street"class="inputs" type="text" placeholder="Street">
+   <input id="checkout" onclick=checkoutListener() type="button" disabled value="Press to Checkout">
    </form>
 `
 
@@ -38,6 +38,17 @@ async function doTheFill() {
     });
     cart_content.insertAdjacentHTML("beforeend", `<h1>Total: ${sumTotal} vbucks</h1>`);
     document.querySelector('.checkout-content').insertAdjacentHTML("afterbegin",fillCheckoutMenu());
+    document.querySelectorAll('.inputs').forEach(element => {
+        console.log('a')
+        element.addEventListener('change', (e) => {
+            if(![...document.querySelectorAll('.inputs')].map((x) => x.value !== '').every((x)=> x)){
+                document.getElementById('checkout').setAttribute('disabled','disabled')
+            }else{
+                document.getElementById('checkout').removeAttribute('disabled')
+            }
+    
+        })
+    })
     assignDelete();
 }
 

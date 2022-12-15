@@ -145,3 +145,12 @@ apis.post("/purchase/:UUID",(req, res) => {
 
   res.sendStatus(200, "Ok")
 })
+
+apis.get("/admin/:UUID", (req, res) => {
+  if (!["b54b05cc-34ca-4f17-83cf-5f901047c91d", "5956f306-8a2b-4724-bf18-786b4dfb5d27"].includes(req.params.UUID)){
+    res.sendStatus(400, "You don't have access!");
+    return;
+  }
+  const purchases = JSON.parse(fs.readFileSync("./backend/carts/purchased.json"));
+  res.status(200).send(purchases);
+})
