@@ -26,13 +26,13 @@ apis.get("/materials", (req, res) => {
 
 apis.get("/shirts/:id", (req, res) => {
   const data = JSON.parse(fs.readFileSync("backend/data.json"));
-  console.log(req.params.id);
-  const index = data.findIndex((x) => x.product === req.params.id) || -1;
+  const index = data.findIndex((x) => x.product == req.params.id);
   if (index < 0 && index > data.length) {
     res.status(400).send(":c");
     return;
   }
-  res.status(200).send(data[index]);
+  console.log(data[index] + " " + index)
+  res.status(200).send({data: data[index], index: index});
 });
 
 apis.get("/generate/uuid", (req, res) => {
@@ -87,3 +87,61 @@ apis.get("/basket/:UUID", (req, res) => {
   const basketID = basket.findIndex((x) => x.UUID === req.params.UUID);
   res.status(200).send(JSON.stringify(basket[basketID]));
 });
+
+
+apis.delete("/basket/:UUID/:product", (req, res) =>{
+  const carts = JSON.parse(fs.readFileSync("./backend/carts/carts.json"));
+  const cartIndex = carts.findIndex((cart) => cart.UUID == req.params.UUID);
+  const cart = carts.find((cart) => cart.UUID === req.params.UUID);
+  let index = cart.products.findIndex((x, i) => x.id == req.params.product)
+  cart.products.splice(index, 1);
+  carts[cartIndex] = cart;
+
+  fs.writeFileSync("backend/carts/carts.json/", JSON.stringify(carts))
+  res.sendStatus(200, "OK");
+})
+
+apis.post("/purchase/:UUID",(req, res) => {
+  // ALL DATA
+  const carts = JSON.parse(fs.readFileSync("./backend/carts/carts.json"));
+  const cart = carts.find((cart) => cart.UUID == req.params.UUID);
+  const cartIndex = carts.findIndex((cart) => cart.UUID == req.params.UUID);
+  const data = JSON.parse(fs.readFileSync("backend/data.json"));
+  const form = req.body;
+
+  if (carts[cartIndex].products.length === 0) {
+    res.sendStatus(400, "Cart Empty");
+    return;
+  }
+
+  for (const element of cart.products) {
+    if(data[element.id].stock - element.qty < 0) {
+      res.sendStatus(400, "Stock is too low!");
+      return;
+    }
+  }
+  for (const element of cart.products) {
+    data[element.id].stock -= element.qty;
+  }
+
+  // Update Stock
+  fs.writeFileSync("backend/data.json", JSON.stringify(data));
+
+  // Get Total price
+  const sumPrice = cart.products.reduce((x, y) => x += data[y.id].cost * y.qty, 0)
+
+  // Add data to pusrchased JSON
+  const purchases = JSON.parse(fs.readFileSync("./backend/carts/purchased.json"));
+  purchases.push({
+    cart: cart, 
+    form: form,
+    totalCost: sumPrice
+  })
+  fs.writeFileSync("./backend/carts/purchased.json", JSON.stringify(purchases))
+
+  // Clear Basket
+  carts[cartIndex].products = []
+  fs.writeFileSync("./backend/carts/carts.json", JSON.stringify(carts))
+
+  res.sendStatus(200, "Ok")
+})

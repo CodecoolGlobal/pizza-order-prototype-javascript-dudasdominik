@@ -1,5 +1,5 @@
 const shirt_component = ({ product, design, cost, stock }, index) => `
-    <div class="shirt-component">
+    <div class="shirt-component ${stock === 0? 'disabled': ''}" >
         <h3>${product}</h3>      
         <img src="${design}">
         <div>
@@ -7,11 +7,11 @@ const shirt_component = ({ product, design, cost, stock }, index) => `
             <h4>${stock} pcs in stock</h4>
         </div>
         <div>
-        <input id="idx-${index}" class="cart" type="button" value="Add to Cart">
-        <form action="/details/details.html?" method="GET">
-            <input type="hidden" name="id" value="${product}" />
-            <input class="details" type="submit" value="Details">
-        </form>
+        <input id="idx-${index}" class="cart" type="button" value="Add to Cart" ${stock === 0? 'disabled': ''}>
+        <form ${stock === 0? 'disabled': ''} action="/details/details.html?" method="GET">
+            <input type="hidden" name="id" value="${product}" ${stock === 0? 'disabled': ''} />
+            <input class="details" type="submit" value="Details" ${stock === 0? 'disabled': ''}>
+        </form >
         <div>
     </div>
 `;
@@ -97,9 +97,9 @@ const searchbox_component = () =>
     <h4>Type</h4>
     <form class="searchForm">
     <input class="clear" type="radio" name="Type" value="Shirt">
-    <label for="Type">Shirt</label>
+    <label for="Type">Not Hoodie</label>
     <input class="clear" type="radio" name="Type" value="Hoodie">
-    <label for="Type">Hoodie</label>
+    <label for="Type">Not Shirt</label>
     </form>
     <hr>
     <input onClick=clearSelection() type="button" value="Clear Selection">

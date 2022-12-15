@@ -1,0 +1,48 @@
+:root {
+    --yellow: #ffe135;
+    --dark_grey: #424b55;
+    --light_grey: #53616f;
+    --tuqoise: #00bd79;
+    /* #6699CC; */
+    /* https://i.pinimg.com/564x/21/0c/cd/210ccd29b1fcedef462caa87f81f03a6.jpg */
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3em;
+}
+
+.cart-content {
+    display: flex;
+    flex-flow: column;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+}
+
+.items > div {
+    grid-column: 2;
+}
+
+.items > img {
+    grid-column: 1;
+    max-height: 5em;
+}
+
+.delete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    filter: grayscale(100);
+}
+
+.delete:hover {
+    transition: .25s ease-in-out;
+    filter: grayscale(0);
+    cursor: pointer;
+    transform-origin: center center;
+    transform: scale(1.2);
+}

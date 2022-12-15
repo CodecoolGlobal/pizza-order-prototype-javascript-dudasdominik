@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./checkout.css">
     <link rel="stylesheet" href="./../style.css">
-    <script src="details.js" defer></script>
     <script src="./../uuid.js" defer></script>
     <script src="./../cart.js" defer></script>
-    <title>Document</title>
+    <script src="./checkout.js" defer></script>
+    <title>Checkout</title>
 </head>
 <body>
     <header>
@@ -89,35 +90,10 @@ m6917 18 c157 -53 261 -174 291 -340 32 -169 -68 -362 -227 -441 -222 -109
             <div class="hide" id="cart-container"></div>
         </nav>
     </header>
-    <section class="details">
-        <img id="design" src="" alt="">
-        <br>
-        <div class="details-text">
-            <h2 id="product"></h2>
-            <br>
-            <div class="general-info">
-                <span class="description">Material:  </span> <span id="material"></span>
-                <br>
-                <span class="description">Category: </span> <span id="type"></span>
-                <br>
-                <span class="description">Available sex: </span> <span id="gender"></span>
-                <br>
-            </div>
-            <div class="purchase-info">
-                <span class="description">Available Sizes </span> <div id="sizes"></div>
-                <br>
-                <span id="cost"></span> <span class="description">Vbucks</span>
-                <br>
-                <span id="stock"></span> <span class="description"> in stock</span>
-            </div>
-            <div>
-                <div class="order">
-                    <input id="order-minus" type="button" value="-">
-                    <input id="order-num" type="number" value="1" disabled>
-                    <input id="order-plus" type="button" value="+">
-                </div>
-                <input id="add-shirts" type="button" value="Add Shirt(s) to Cart">
-            </div>
+    <section class="checkout">
+        <div class="cart-content">
+        </div>
+        <div class="checkout-content">
         </div>
     </section>
 </body>
