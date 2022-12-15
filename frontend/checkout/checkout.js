@@ -40,7 +40,7 @@ async function doTheFill() {
     document.querySelector('.checkout-content').insertAdjacentHTML("afterbegin",fillCheckoutMenu());
     document.querySelectorAll('.inputs').forEach(element => {
         console.log('a')
-        element.addEventListener('change', (e) => {
+        element.addEventListener('input', (e) => {
             if(![...document.querySelectorAll('.inputs')].map((x) => x.value !== '').every((x)=> x)){
                 document.getElementById('checkout').setAttribute('disabled','disabled')
             }else{

@@ -75,7 +75,7 @@ async function clickCart(e) {
       },
       body: JSON.stringify({
         UUID: getCookie("UUID"),
-        product: index,
+        product: Number(index),
         qty: Number(document.querySelector("#order-num").value),
       }),
     });

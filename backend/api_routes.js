@@ -52,7 +52,7 @@ apis.post("/basket", (req, res) => {
     if (existingProduct) {
       existingProduct.qty += qty;
     } else {
-      cart.products.push({ id: product, qty });
+      cart.products.push({ id: Number(product), qty });
     }
 
     fs.writeFileSync(
@@ -147,7 +147,7 @@ apis.post("/purchase/:UUID",(req, res) => {
 })
 
 apis.get("/admin/:UUID", (req, res) => {
-  if (!["b54b05cc-34ca-4f17-83cf-5f901047c91d", "5956f306-8a2b-4724-bf18-786b4dfb5d27"].includes(req.params.UUID)){
+  if (!["b54b05cc-34ca-4f17-83cf-5f901047c91d", "5956f306-8a2b-4724-bf18-786b4dfb5d27", "f59734f7-a801-4eca-bc97-1d74b7fcffed"].includes(req.params.UUID)){
     res.sendStatus(400, "You don't have access!");
     return;
   }

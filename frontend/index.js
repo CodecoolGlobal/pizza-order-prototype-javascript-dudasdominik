@@ -44,7 +44,7 @@ async function clickCart(e) {
         body: JSON.stringify(
             {
                 UUID: getCookie("UUID"),
-                product: e.target.id.split("-")[1],
+                product: Number(e.target.id.split("-")[1]),
                 qty: 1
             }),
         })
