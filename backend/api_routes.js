@@ -64,7 +64,7 @@ apis.post("/basket", (req, res) => {
   } else {
     const newCart = {
       UUID: UUID,
-      products: [{ id: product, qty }],
+      products: [{ id: Number(product), qty }],
     };
     carts.push(newCart);
 
