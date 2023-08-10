@@ -1,8 +1,9 @@
-Todo:
-fiter ✅
-cart hover ✅
-cookies ✅
-checkout 
+# Simple Web Shop app
+## Task
+- Create a web shop prototype with filter and checkout funcionality
 
-optional:
-exchange rate api
+## Tools and Technologies
+- JavaScript
+- Html
+- Css
+- Express
