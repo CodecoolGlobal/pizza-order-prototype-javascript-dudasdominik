@@ -136,16 +136,6 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- CONTACT -->
-## Contact
-
-Dudás Dominik - dudasdominik3@gmail.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
