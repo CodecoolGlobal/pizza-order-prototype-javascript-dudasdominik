@@ -71,10 +71,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was one of the first time that we were using Express and making a Webshop on our own
+This project is about making an online webshop with our own idea which was to sell t-shirt and hoodies and it was one of the first time that we were using Express.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Technoligies -->
+## Technologies and Tools
+### Backend
+- Express JS
+
+### Frontend
+- HTML + Javascript
+
+### Additional
+- Docker
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
